@@ -1,5 +1,8 @@
 # Menhera-chan Search
 
+## Demo
+https://www.youtube.com/watch?v=PS05f-aBiEA
+
 ## Installation
 Download Menhera-chan images and put all to ./data/images
 
