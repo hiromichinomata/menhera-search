@@ -1,15 +1,30 @@
 <html>
   <head>
     <title>Menhera-chan Search</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" rel="stylesheet"/>
   </head>
   <body>
-    <h1>Menhera-chan Search</h1>
-    <div>
-      <% filename_meta.each do |fm| %>
+    <div class="navbar">
+      <h1>Menhera-chan Search</h1>
+    </div>
+    <div class="container is-fluid">
+      <% filename_meta.each.with_index do |fm, index| %>
         <% image_path = "/data/images/#{fm[0]}" %>
         <% image_name = fm[1] %>
-        <image src="<%= image_path %>" />
-        <p><%= image_name %></p>
+        <% if index % 6 == 0 %>
+          <div class="columns">
+        <% end %>
+
+        <div class="column is-2">
+          <figure>
+            <image src="<%= image_path %>" />
+            <p><%= image_name %></p>
+          </figure>
+        </div>
+
+        <% if index % 6 == 5 %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </body>
