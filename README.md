@@ -12,7 +12,6 @@ Download Menhera-chan images and put all to ./data/images
 ```bash
 rbenv install 2.4.1
 ruby main.rb
-cd public
 python -m SimpleHTTPServer
 ```
 

@@ -4,5 +4,13 @@
   </head>
   <body>
     <h1>Menhera-chan Search</h1>
+    <div>
+      <% filename_meta.each do |fm| %>
+        <% image_path = "/data/images/#{fm[0]}" %>
+        <% image_name = fm[1] %>
+        <image src="<%= image_path %>" />
+        <p><%= image_name %></p>
+      <% end %>
+    </div>
   </body>
 </html>
