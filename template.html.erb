@@ -8,8 +8,14 @@
       <h1>Menhera-chan Search</h1>
     </div>
     <div class="container is-fluid">
+      <div class="field">
+        <div class="control">
+          <input id="word-filter" class="input" type="text" placeholder="Input filter word"/>
+        </div>
+      </div>
       <% filename_meta.each.with_index do |fm, index| %>
         <% image_path = "/data/images/#{fm[0]}" %>
+        <% raw_image_path = fm[0] %>
         <% image_name = fm[1] %>
         <% if index % 6 == 0 %>
           <div class="columns">
@@ -19,6 +25,7 @@
           <figure>
             <image src="<%= image_path %>" />
             <p><%= image_name %></p>
+            <p><%= raw_image_path %></p>
           </figure>
         </div>
 
@@ -27,5 +34,8 @@
         <% end %>
       <% end %>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
+    </script>
   </body>
 </html>
